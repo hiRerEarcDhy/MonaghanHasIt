@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="images/monaghanPNG.png">  
+    <title>Landmarks</title>
+
+    <style>
+
+body 
+{
+    padding-top: 54px;
+}
+
+@media (min-width: 992px) 
+{
+    body {
+        padding-top: 56px;
+    }
+}
+
+header.masthead 
+{
+    background: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Church_Square%2C_Monaghan.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header.masthead > .overlay 
+{
+    padding: 5rem 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 992px) 
+{
+    header.masthead > .overlay {
+        padding: 10rem 0;
+    }
+}
+    
+#mapDiv 
+{
+    width:800px;
+    height:500px;
+    margin: auto;
+    border:thin solid white ;
+}
+
+#directions
+{
+    float:left;
+    width:100%;
+    margin:0px;
+}
+
+button
+{	
+        left:600px;
+
+}
+
+.location
+{
+    width: 25%;
+    height: 70px;
+    text-align: center;
+    font-size: 2em;
+    font-family: Raleway;
+}
+
+#centerText
+{
+    padding: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align:center;
+}
+ #contentbox
+{
+    background-color: #f4f4f4;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 1%; 
+}
+#landmark_content
+{
+  padding: 1%;
+  margin: auto;
+  width:470px;
+  height:200px;
+  background-color:#f4f4f4;
+  border-radius: 10px;
+}
+#landmark_content img
+{
+  clear:both;
+  float:right;
+  width: 30%;
+  margin: 7px;
+  border-radius: 50px;
+}
+    </style>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+</head>
+  <body>
+
+ 
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><h1>Monaghan Has It</h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li>
+              <a class="nav-link" href="index.html">About
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Landmarks</a>
+            </li>
+            <li>
+              <a class="nav-link" href="rossmore.html">Rossmore Forest Park</a>
+            </li>
+            <li>
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li>
+              <a class="nav-link" href="accounts.php">Account</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead">
+      <div class="overlay">
+        <div class="container">
+            <h1 class="display-1 text-white">Landmarks <br>of<br> Monaghan</h1>
+        </div>
+
+        
+        &nbsp;
+        
+        
+          
+      </div>
+    </header>
+    
+
+    <div id ='contentbox'>
+        
+    <h2 id='centerText'>Below, is a map showing the most popular attractions in monaghan. Click the landmarks to reveal a briefing of the site.</h2>
+      <div id="mapDiv"></div>
+      
+      
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9qFT3lP1nwCvoX7WQd9cYtJRG_2rvC6w "></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script type ='text/javascript'>
+var dawson_memorial_string = '<div id="landmark_content"><h1>The Dawson Memorial</h1><div id="content"><p><img src = "images/dawsonmemorial.jpg">This classical monument occupies the middle of the most central of Monaghans public spaces. It was built to remember Colonel Dawson who was killed at Inkerman in 1854 during the Crimean War.</p><br><p>More Info:<br><a href="http://archiseek.com/2009/1857-dawson-monument-monaghan-co-monaghan/">Dawson Monument Info</a></p></div></div>';
+
+var rossmore_memorial_string = '<div id="landmark_content"><h1>The Rossmore Memorial</h1><div id="content"><p><img src = "images/rossmorememorial.jpg">The structure commemorates Henry Westenra, fourth Baron Rossmore who died as the result of a hunting accident at Windsor Castle, England, in 1874.</p><br><p>More Info:<br><a href="http://archiseek.com/2009/1876-rossmore-memorial-monaghan-co-monaghan/">Rossmore Memorial Info</a></p></div></div>';
+
+var oldcross_string = '<div id="landmark_content"><h1>The Old Cross Square</h1><div id="content"><p><img src = "images/oldcross.jpg">The Old Cross, located in Old Cross Square, dates from the seventeenth century. This makes it the longest surviving architectural feature in Monaghan town. Although called the Old Cross, this feature is an old sundial stand. Before clocks and watches became widespread, sundials were used to tell the time.</p><br><p>More Info:<br><a href="http://www.askaboutireland.ie/learning-zone/primary-students/looking-at-places/monaghan/architecture-of-monaghan/the-old-cross/">Old Cross Square Info</a></p></div></div>';
+
+var cathedral_string = '<div id="landmark_content"><h1>St.Macartans Cathedral</h1><div id="content"><p><img src = "images/cathedral.jpg">St.Macartans, one of the tallest structures in Ireland(6th tallest structure), looms over Monaghan and can be seen from afar no matter where you are in the county. Well known for its gothic style construct and beauty.</p><br><p>More Info:<br><a href="https://en.wikipedia.org/wiki/St_Macartan%27s_Cathedral,_Monaghan">St.Macartans Cathedral Info</a></p></div></div>';
+
+var leslie_string = '<div id="landmark_content"><h1>Castle Leslie Estate</h1><div id="content"><p><img src = "images/leslie.jpg">The estate is open to paying guests, who can stay in the former Hunting Lodge, the main house itself, and the recently constructed traditional-style holiday cottages located in the village.</p><br><p>More Info:<br><a href="https://en.wikipedia.org/wiki/Castle_Leslie">Castle Leslie Info</a></p></div></div>';
+
+var clones_string = '<div id="landmark_content"><h1>Clones round Tower</h1><div id="content"><p><img src = "images/tower.jpg">The round tower at Clones would have originally stood at almost 23 metres in height, including the conical cap, which is now sadly missing. The tower was built from sandstone and looks as though it may have been an early tower probably built around the 10 century.</p><br><p>More Info:<br><a href="http://roundtowers.org/clones/index.html">Clones Round Tower Info</a></p></div></div>';
+// These constants must start at 0
+// These constants must match the data layout in the 'locations' array below
+var CONTENT = 0; 
+var LATITUDE = 1; 
+var LONGITUDE = 2;
+var locations = [
+                    [dawson_memorial_string, 54.2479413,-6.9708631]];
+
+var landmark_map = new google.maps.Map(document.getElementById('mapDiv'), 
+                                     {zoom : 11,
+                                      center : new google.maps.LatLng(54.2484781,-6.9687544),
+                                      mapTypeId : google.maps.MapTypeId.ROADMAP});
+
+var location_marker;
+var mapWindow = new google.maps.InfoWindow();
+
+for (var i = 0; i < locations.length; i++) 
+{  
+   location_marker = new google.maps.Marker({position : new google.maps.LatLng(locations[i][1], locations[i][2]), 
+                                           map : landmark_map});
+
+   google.maps.event.addListener(location_marker, 'click', (function(location_marker, i) 
+                                                     {
+                                                        return function() 
+                            {
+                                                           mapWindow.setContent(locations[i][0]);
+                                                           mapWindow.open(landmark_map, location_marker);
+                                                        }
+                                                     })(location_marker, i));
+}    
+</script>
+
+    <br><br>
+    
+    <section>
+      <div class="container">   
+          <div class="row align-items-center">
+          <div class="col-md-6 order-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/MonaghanCathedral.JPG/1200px-MonaghanCathedral.JPG" alt="">
+            </div>
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+                
+              <h2 class="display-4">St.Macartans Cathedral, Dublin Rd</h2>
+              <p>St Macartan's cathedral is the cathedral church of the Roman Catholic Diocese of Clogher in Ireland. It is located in the townland of Latlurcan, Monaghan town in the ecclesiastical parish of Monaghan and Rackwallace. It was built between the years of 1861 and 1893 and is the only Catholic cathedral in the county. St.Macartan's Cathedral is also <b>one of the tallest structures in Ireland</b> (6th tallest).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="http://farm4.static.flickr.com/3515/3871650487_fd1d9bfa4b.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-5">
+              <h2 class="display-4">The Rossmore Memorial, The Diamond</h2>
+              <p>The first stop is the beautiful Victorian fountain located in the Diamond, which is known locally as the Rossmore Memorial.
+There are eight columns around the fountain, each with a letter on top which together spell the name Rossmore.
+The Memorial commemorates Henry Robert Westenra, fourth Baron Rossmore who died as a result of a hunting accident in Windsor Castle in 1874 aged 23.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="http://s0.geograph.org.uk/geophotos/04/55/86/4558628_94b0d4cd.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+              <h2 class="display-4">The Dawson Memorial, Church Square</h2>
+              <p>The Dawson Monument was built to commemorate Colonel Dawson – a local landowner who died at the battle of Inkerman in 1854. A tall obelisk designed by W.J. Barre of Newry, the design was originally intended for Scrabo Hill as a memorial for Lord Londonderry but the commission was awarded to Charles Lanyon instead. The stele of the obelisk has the words Alma and Inkerman inscribed some way up. Damaged by a bomb in 1974 and by heavy traffic since, the obelisk is in need of stabilisation – a steel band has recently been placed around the top part to keep the stones together. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+          <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="https://media-cdn.tripadvisor.com/media/photo-s/0b/af/da/cd/exterior-castle.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+                
+              <h2 class="display-4">Castle Leslie Estate, Glaslough</h2>
+              <p>Home to an Irish branch of Clan Leslie. The Estate has three lakes, 1'000 acre park land, meandering streams and several forests. The house is still home to the Leslie family, the late Sir Jack Leslie (6 December 1916 - 16 April 2016) returned to live at Castle Leslie at the age of 78 and the principal owner is Samantha Leslie. Weddings and events can be held here and is wildly known across the country.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="images/oldcross.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+              <h2 class="display-4">Old Cross Square Monument, Old Cross Square</h2>
+              <p>The Old Cross, located in Old Cross Square, dates from the seventeenth century. This makes it the longest surviving architectural feature in Monaghan town. Although called the Old Cross, this feature is an old sundial stand. Before clocks and watches became widespread, sundials were used to tell the time.
+
+The Old Cross stood at the centre of The Diamond at the heart of the town until the mid-1870s. As the central point of the town, people attached proclamations to it and used it as a meeting point for trade and hiring.
+
+It was removed to allow for the construction of the Rossmore Monument. The citizens of the town had grown very attached to the Old Corss and did not want it to disappear. As a compromise, it was moved to its current location at Old Cross Square.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<div id="centerText">
+    <a href="https://www.facebook.com/pages/The-Monaghan-Mouth/131529503596715">
+<img border="0" alt="Facebook" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/social-facebook-icon.png" width="75" height="75">
+</a>
+        <a href="https://twitter.com/MonaghanCoCo">
+<img border="0" alt="Facebook" src="http://communicasound.com/wp-content/uploads/2017/02/Twitter-Logo-PNG-1.png" width="75" height="75">
+</a>
+        <a href="https://www.tumblr.com/search/county%20monaghan">
+<img border="0" alt="Facebook" src="https://assets.tumblr.com/images/logo_page/blue-t.png" width="75" height="75">
+</a>
+</div>
+    
+<!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">&copy; 2017 Monaghan Has It</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+    </div>
+  </body>
+
+</html>

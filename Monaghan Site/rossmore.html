@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="images/monaghanPNG.png">  
+    <title>Rossmore Forest Park</title>
+
+    <style>
+* {box-sizing:border-box}
+body 
+{
+    padding-top: 54px;
+}
+.mySlides 
+{
+    display:none;
+}
+@media (min-width: 992px) 
+{
+    body {
+        padding-top: 56px;
+    }
+}
+
+header.masthead 
+{
+    background: url('http://monaghanhasit.ie/wp-content/uploads/2016/11/rossmore.png') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header.masthead > .overlay 
+{
+    padding: 5rem 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 992px) 
+{
+    header.masthead > .overlay {
+        padding: 10rem 0;
+    }
+}
+
+#directions
+{
+    float:left;
+    width:100%;
+    margin:0px;
+}
+
+button
+{	
+        left:600px;
+
+}
+
+.location
+{
+    width: 25%;
+    height: 70px;
+    text-align: center;
+    font-size: 2em;
+    font-family: Raleway;
+}
+
+#centerText
+{
+    padding: 5%;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align:center;
+    font-size: 1.3em;
+}
+
+#contentbox
+{
+    background-color: #f4f4f4;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 1%; 
+}
+
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;margin:0}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,26);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/12 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.1s ease;
+}
+
+.active2, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 90s;
+  animation-name: fade;
+  animation-duration: 90s;
+}
+
+@-webkit-keyframes fade {
+  0%
+  {
+      opacity:0;
+  }
+  
+  1%
+  {
+      opacity:1;
+      
+  }
+  100%
+  {
+      opacity:1;
+  }
+}
+
+@keyframes fade {
+  0%
+  {
+      opacity:0;
+  }
+  
+  1%
+  {
+      opacity:1;
+      
+  }
+  100%
+  {
+      opacity:1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+    </style>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <!-- Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9qFT3lP1nwCvoX7WQd9cYtJRG_2rvC6w "></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+  <body>
+
+    
+      
+      
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html"><h1>Monaghan Has It</h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li>
+              <a class="nav-link" href="index.html">About</a>
+            </li>
+            <li>
+              <a class="nav-link" href="landmarks.html">Landmarks</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Rossmore Forest Park</a>
+            </li>
+            <li>
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li>
+              <a class="nav-link" href="accounts.php">Account</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead">
+      <div class="overlay">
+        <div class="container">
+            <h2 class="display-2 text-white">Rossmore <br>Forest Park</h2>
+        </div>
+
+        
+        &nbsp;
+        
+        
+          
+      </div>
+    </header>
+<div id='contentbox'>
+    <div id="centerText">
+
+
+        <p class = monaghaninfo >Rossmore Forest Park is Monaghan's pride and joy, as it stands onn the edge of the town with acres and acres of forest. The main entrance to Rossmore Forest can be located on the Newbliss/Threemilehouse road. <b>Only the buttresses to the castle walls and the entrance stairway of the Rossmore Castle now remain</b> providing a viewing point to the surrounding countryside. Examples of a wedge tomb and a court tomb dating back to about <b>3000 – 1800 BC</b> exist within the park. <b>A gold ‘lunula’ or collar, dating from 1800 BC</b> was discovered in the park around 1930 and is on display in the National Museum, Dublin. <b>A walled garden was developed as a ‘formal garden’</b>. Its main attraction is the yew hedges and arched walkways of trained shrubs.  Amongst its large number of trees and plant life are <b>Californian redwoods</b> planted at various locations. One of these Redwoods is situated <b>near the entrance gate</b>. The park also has an adjoining 18 hole golf course of Rossmore Golf Club.</p>&nbsp;
+<h1>Forest Gallery:</h1>
+</div>
+    
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 12</div>
+  <img src="http://www.picturesofireland.ie/Winter%20Scenes%202010-2011/album/slides/Picnic%20tables,%20Rossmore%20Forest%20Park.jpg" style="width:100%">
+  <div class="text">Snowy day By The Castle Ruins</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 12</div>
+  <img src="https://monaghantourism.com/images/advportfolio/images/ross-blue-b-2-m_1464091399.jpg" style="width:100%">
+  <div class="text">Bluebells</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 12</div>
+  <img src="https://drscdn.500px.org/photo/157676359/m%3D900_s%3D1_k%3D1_a%3D1/v2?webp=true&v=3&sig=6b9c4c0714685e9e1998259d6b364a78597347912bc3210ce6e277c22de9064a" style="width:100%">
+  <div class="text">Windy Trees</div>
+</div>
+    
+    <div class="mySlides fade">
+  <div class="numbertext">4 / 12</div>
+  <img src="http://www.picturesofireland.ie/rfp/slides/23.%20Rossmore%20in%20winter%20-%20Snowy%20path%20at%20Priestfield.jpg" style="width:100%">
+  <div class="text">Snowy Path</div>
+</div>
+    
+    <div class="mySlides fade">
+  <div class="numbertext">5 / 12</div>
+  <img src="http://www.picturesofireland.ie/Winter%20Scenes%202010-2011/album/slides/Castle%20Lake,%20Rossmore%20Forest%20Park.jpg" style="width:100%">
+  <div class="text">Icy Lake</div>
+</div>
+    
+    <div class="mySlides fade">
+  <div class="numbertext">6 / 12</div>
+  <img src="http://www.picturesofireland.ie/rfp/slides/13.%20Rossmore%20in%20summer%20-%20Cloud%20reflection.jpg" style="width:100%">
+  <div class="text">Mirrored Lake</div>
+</div>
+    
+    <div class="mySlides fade">
+  <div class="numbertext">7 / 12</div>
+  <img src="http://s0.geograph.org.uk/geophotos/01/65/06/1650627_f00305df.jpg" style="width:100%">
+  <div class="text">Small Dull Lake</div>
+</div>
+    
+    <div class="mySlides fade">
+  <div class="numbertext">8 / 12</div>
+  <img src="http://anteachbanemyvale.com/wp-content/uploads/2015/08/rossmorepark.jpg" style="width:100%">
+  <div class="text">Fishing</div>
+</div>
+    
+    <div class="mySlides fade">
+  <div class="numbertext">9 / 12</div>
+  <img src="http://www.picturesofireland.ie/rfp/slides/15.%20Autumn%20in%20Rossmore%20-%20Two%20roads%20diverge%20in%20a%20wood..jpg" style="width:100%">
+  <div class="text">Autumn Paths</div>
+</div>
+    
+    <div class="mySlides fade">
+  <div class="numbertext">10 / 12</div>
+  <img src="http://monaghanhasit.ie/wp-content/uploads/2016/11/rossmore.png" style="width:100%">
+  <div class="text">In Bloom</div>
+</div>
+    
+    <div class="mySlides fade">
+  <div class="numbertext">11 / 12</div>
+  <img src="https://c1.staticflickr.com/7/6101/6213596365_6221c0038e_b.jpg" style="width:100%">
+  <div class="text">Windy Trees Pt.2</div>
+</div>
+    
+    <div class="mySlides fade">
+  <div class="numbertext">12 / 12</div>
+  <img src="http://www.picturesofireland.ie/rfp/slides/2.%20Rossmore%20in%20Spring%20-%20Bluebells%20at%20the%20lakeside..jpg" style="width:100%">
+  <div class="text">Bluebells</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span> 
+  <span class="dot" onclick="currentSlide(11)"></span> 
+  <span class="dot" onclick="currentSlide(12)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active2", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active2";
+}
+</script>
+    &nbsp;
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="http://www.libraryireland.com/Atlas/Monaghan-Rossmore-Castle.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+                
+              <h2 class="display-4">Rossmore Castle</h2>
+              <p>The building was a <b>19th-century castle</b>. Originally built by the <b>2nd Lord Rossmore in 1827</b> in the Gothic style, it was extended in 1858. Unfortunately, after the Second World War, <b>dry rot forced the abandonment of the castle</b>, which has since been demolished.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="http://www.buildingsofireland.ie/niah/images/survey_specific/fullsize/41401312_17.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-5">
+              <h2 class="display-4">Rossmore Mausoleum</h2>
+              <p>The Rossmore Mausoleum was designed by E.J. Tarver by commission of the fifth Baron Rossmore. Much like the rossmore memorial in the Diamond, Monaghan Town, it commemorates the death of the fourth baron who died after a hunting accident at Windsor Castle in 1874, aged 23. Built on a rocky outcrop over a small river and waterfall, the picturesque mausoleum fell into disrepair and was victim to theft and graffiti in the late twentieth century. It is currently being painstakingly conserved by the voluntary Rossmore Mausoleum Conservation Group.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    &nbsp;
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 order-2">
+            <div class="p-5">
+              <img src="https://a.ltrbxd.com/resized/film-poster/4/3/0/7/5/43075-shrooms-0-230-0-345-crop.jpg?k=dcb8763bb6" alt="">
+            </div>
+          </div>
+          <div class="col-md-6 order-1">
+            <div class="p-5">
+                
+              <h2 class="display-4">'Shrooms'</h2>
+              <p>The film 'Shrooms' was shot in Rossmore Forest Park over the period of seven weeks in 2007. This is the first film shot in Rossmore Forest Park. Shrooms is a thriller/horror, and locals may even recognise parts of Rossmore Forest in the film.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<div id="centerText">
+    <a href="https://www.facebook.com/pages/The-Monaghan-Mouth/131529503596715">
+<img border="0" alt="Facebook" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/social-facebook-icon.png" width="75" height="75">
+</a>
+        <a href="https://twitter.com/MonaghanCoCo">
+<img border="0" alt="Facebook" src="http://communicasound.com/wp-content/uploads/2017/02/Twitter-Logo-PNG-1.png" width="75" height="75">
+</a>
+        <a href="https://www.tumblr.com/search/county%20monaghan">
+<img border="0" alt="Facebook" src="https://assets.tumblr.com/images/logo_page/blue-t.png" width="75" height="75">
+</a>
+</div>
+    
+<!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">&copy; 2017 Monaghan Has It</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+</div>
+  </body>
+
+</html>

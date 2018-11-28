@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="images/monaghanPNG.png">  
+    
+   <title>Home</title>
+
+    <style>
+body 
+{
+}
+
+@media (min-width: 992px) 
+{
+    body {
+    }
+}
+
+header.masthead {
+    background: url('https://upload.wikimedia.org/wikipedia/commons/b/b2/Church_Square%2C_Monaghan.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header.masthead > .overlay 
+{
+    padding: 5rem 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 992px) 
+{
+    header.masthead > .overlay 
+    {
+        padding: 10rem 0;
+    }
+}       
+        
+    #mapDiv 
+    {
+        width:400px;
+        height:400px;
+        margin: auto;
+        border:thin solid #CCC;
+    }
+
+    #directions
+    {
+        float:left;
+        width:100%;
+        margin:0px;
+    }
+
+    button
+    {	
+            left:600px;
+            
+    }
+    
+    .location
+    {
+        width: 25%;
+        height: 60px;
+        text-align: center;
+        font-size: 2em;
+        font-family: Raleway;
+    }
+    
+    #centerText
+    {
+        padding: 5%;
+        padding-left: 20%;
+        padding-right: 20%;
+        text-align:center;
+    }
+    
+    .monaghaninfo
+    {
+        font-size: 1.3em;
+        
+    }
+    
+     #contentbox
+    {
+        background-color: #f4f4f4;
+        margin-left: 20%;
+        margin-right: 20%;
+        margin-top: 1%; 
+    }
+
+    
+    
+    </style>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <!-- Google Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9qFT3lP1nwCvoX7WQd9cYtJRG_2rvC6w "></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script>
+var currentLocationMap;
+var directionsDisplay;
+var directionsService;
+
+
+
+function init()
+{
+    directionsService = new google.maps.DirectionsService();
+    // route planner
+    directionsDisplay = new google.maps.DirectionsRenderer();
+    var currentLocationMap = new google.maps.LatLng(54.2457199,-7.0060242);
+
+    var mapOptions = {zoom: 9, center: currentLocationMap};
+    currentLocationMap = new google.maps.Map(document.getElementById('mapDiv'), mapOptions);
+    directionsDisplay.setMap(currentLocationMap);
+
+   
+}
+
+
+function calculateRoute()
+{
+	
+    var start = document.getElementById('start').value;
+    var end = document.getElementById('end').value;
+
+    var request = {origin: start,
+        destination: end,
+        travelMode: google.maps.TravelMode.DRIVING};
+
+    directionsService.route(request, function (response, status)
+    {
+        if (status == google.maps.DirectionsStatus.OK)
+        {
+            directionsDisplay.setDirections(response);
+        }
+    }
+    );
+}
+</script>
+</head>
+
+  <body onload = 'init()'>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><h1>Monaghan Has It</h1></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">About
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="landmarks.html">Landmarks</a>
+            </li>
+            <li>
+              <a class="nav-link" href="rossmore.html">Rossmore Forest Park</a>
+            </li>
+            <li>
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li>
+              <a class="nav-link" href="accounts.php">Account</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead">
+      <div class="overlay">
+        <div class="container">
+            
+            <div id="fade"><h1 class="display-1 text-white">Welcome.</h1></div>
+            
+          <h2 class="display-4 text-white">Tell us where you're coming from, and we will direct you here.</h2>
+        </div>
+        <br>
+        <input id="start" type="text" class = "location"><br>
+
+        <br>
+        <select id="end" hidden>
+        <option value="Monaghan" >Monaghan</option>
+        </select>
+        &nbsp;
+        <button onclick='calculateRoute()'>Submit</button>
+        <br><br>
+        
+        <div id="mapDiv"></div> 
+          
+      </div>
+    </header>
+
+    
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <div id ='contentbox'>
+    <div id="centerText">
+
+        <img src='images/monaghanPNG.png'>
+        <p class = monaghaninfo >County Monaghan(Irish: Contae Mhuineacháin). It is part of the <b>border region</b> and is in the province of Ulster. The population of the county is 60,483, according to the 2011 census. The county has <b>existed since 1585.</b>, when the Mac Mathghamhna rulers of Airgíalla agreed to join the Kingdom of Ireland. Following the Irish War of Independence and the signing of the Anglo-Irish Treaty, Monaghan was one of three Ulster counties to join the Irish Free State rather than Northern Ireland.<br>Monaghan is the fifth smallest of the Republic's 26 counties in area and <b>fourth smallest by population</b>. It is the <b>smallest of Ulster's nine counties in size</b> and also the smallest in terms of population.&nbsp;<br> <br>Monaghan is home to a collection of small parishes, and has enough amenities nearby to make any traveller feel at home. Monaghan may be small, but there is more than enough to make up for the small county's size.</p>
+        <br>
+            
+<a href="https://www.facebook.com/pages/The-Monaghan-Mouth/131529503596715">
+<img border="0" alt="Facebook" src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/1024/social-facebook-icon.png" width="75" height="75">
+</a>
+        <a href="https://twitter.com/MonaghanCoCo">
+<img border="0" alt="Facebook" src="http://communicasound.com/wp-content/uploads/2017/02/Twitter-Logo-PNG-1.png" width="75" height="75">
+</a>
+        <a href="https://www.tumblr.com/search/county%20monaghan">
+<img border="0" alt="Facebook" src="https://assets.tumblr.com/images/logo_page/blue-t.png" width="75" height="75">
+</a>
+     </div>       
+
+ 
+
+<!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">&copy; 2017 Monaghan Has It</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+        </div>
+  </body>
+
+</html>
